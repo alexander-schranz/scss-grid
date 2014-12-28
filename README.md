@@ -6,7 +6,7 @@ Simple to modified with scss/sass variables. Used to add dynamic breakpoints to 
 
 #### Setup
 
-Copy src/grid.scss and src/grid-ie.scss into your project and edit the variables for your own use: 
+Copy `src/grid-variables.scss`, `src/grid.scss` and `src/grid-ie.scss` into your project and edit the variables for your own use: 
 ``` scss
 $grid_defaultPadding: 2%;
 $grid_defaultFontSize: $defaultFontSize; // needed for inlineBlock Grid
