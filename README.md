@@ -2,6 +2,10 @@
 
 Simple to modified with scss/sass variables. Used to add dynamic breakpoints to your grid system.
 
+## How to use
+
+#### Setup
+
 Copy src/grid.scss and src/grid-ie.scss into your project and edit the variables for your own use: 
 ``` scss
 $grid_defaultPadding: 2%;
@@ -30,6 +34,7 @@ $grid_breakPoints: (
 );
 ```
 
+#### Using
 Use the grid in your HTML:
 
 ``` html
