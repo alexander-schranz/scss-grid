@@ -2,6 +2,11 @@
 
 Simple to modified with scss/sass variables. Used to add dynamic breakpoints to your grid system.
 
+# Features
+ - Multiple Grid Types: Float, Inline-Block
+ - Dynamic Grid Steps (12, 18, 24, ...)
+ - No Breakpoint limits
+
 ## How to use
 
 #### Setup
