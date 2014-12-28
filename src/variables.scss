@@ -1,0 +1,28 @@
+/* ================== *
+ *     VARIABLES      *
+ * ================== */
+
+$grid_defaultPadding: 2%;
+$grid_defaultFontSize: '16px'; // needed for inlineBlock Grid
+$grid_size: 12;
+$grid_type: 'float'; // float, inlineBlock
+$grid_breakPoints: (
+        (
+                'prefix': 'tab',
+                'maxWidth': '1023px',
+                'padding': $grid_defaultPadding,
+                'fontSize': $grid_defaultFontSize // needed for inlineBlock Grid
+        ),
+        (
+                'prefix': 'pal',
+                'maxWidth': '679px',
+                'padding': $grid_defaultPadding,
+                'fontSize': $grid_defaultFontSize // needed for inlineBlock Grid
+        ),
+        (
+                'prefix': 'mob',
+                'maxWidth': '479px',
+                'padding': $grid_defaultPadding,
+                'fontSize': $grid_defaultFontSize // needed for inlineBlock Grid
+        )
+);
