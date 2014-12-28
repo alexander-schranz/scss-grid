@@ -1,4 +1,4 @@
-# Dynamic Grid Generator
+# Dynamic CSS Grid Generator
 
 Simple to modified with scss/sass variables. Used to add dynamic breakpoints to your grid system.
 
