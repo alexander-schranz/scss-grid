@@ -14,8 +14,7 @@
             clear: both;
         }
     } @else if $grid_type == 'inlineBlock' {
-        // font-size: 0;
-        word-spacing: -0.5em;
+        font-size: 0;
     }
     > * {
         @if $grid_type == 'float' {
@@ -23,7 +22,6 @@
         } @else if $grid_type == 'inlineBlock' {
             @include inline-block;
             vertical-align: top;
-            word-spacing: normal;
             font-size: $grid_defaultFontSize;
         }
         padding: 0 $grid_defaultPadding;
