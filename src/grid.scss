@@ -14,7 +14,8 @@
             clear: both;
         }
     } @else if $grid_type == 'inlineBlock' {
-        font-size: 0;
+        // font-size: 0;
+        word-spacing: -0.5em;
     }
     > * {
         @if $grid_type == 'float' {
@@ -22,11 +23,22 @@
         } @else if $grid_type == 'inlineBlock' {
             @include inline-block;
             vertical-align: top;
+            word-spacing: normal;
             font-size: $grid_defaultFontSize;
         }
         padding: 0 $grid_defaultPadding;
         margin-left: 0 !important;
         margin-right: 0 !important;
+    }
+}
+
+.grid-clear {
+    float: none;
+    &:after {
+        content: " ";
+        display: block;
+        height: 0;
+        clear: both;
     }
 }
 
@@ -39,8 +51,10 @@
 /* ================= *
  *    BREAKPOINTS    *
  * ================= */
-
 @each $grid_breakPoint in $grid_breakPoints {
+    .#{map-get($grid_breakPoint, prefix)}-grid-clear {
+        display: none;
+    }
     @media (max-width: #{map-get($grid_breakPoint, maxWidth)}) {
         .grid {
             > * {
@@ -52,12 +66,21 @@
             }
         }
 
+        .#{map-get($grid_breakPoint, prefix)}-grid-clear {
+            float: none;
+            &:after {
+                content: " ";
+                display: block;
+                height: 0;
+                clear: both;
+            }
+        }
+
         @for $i from 1 through $grid_size {
             .#{map-get($grid_breakPoint, prefix)}-grid-#{$i} {
                 width: percentage($i/$grid_size);
             }
         }
     }
-
 }
 
